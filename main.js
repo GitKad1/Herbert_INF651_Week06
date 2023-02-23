@@ -125,6 +125,10 @@ console.log(goToSecondClass(myClasses));
 // a method named "taste". Have the taste method
 // return "Wow!".
 /////
+const pie = new Object();
+pie.slices = 8;
+pie.taste = function() {return "Wow!"};
+
 // 8b) Create a new object named "blueBerryPie"
 // that uses the pie object as a constructor
 // to inherit its property and method. Use
@@ -134,3 +138,6 @@ console.log(goToSecondClass(myClasses));
 // this new object to return "Delicious!"
 ////////////////
 // Hint: Inheritance is in this week's video.
+const blueBerryPie = Object.create(pie);
+blueBerryPie.flavor = "blueberry";
+blueBerryPie.taste = function() {return "Delicious!"}
